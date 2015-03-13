@@ -2,7 +2,7 @@ echo "Installing all Islandora Foundation modules"
 
 # List of Islandora Foundation modules
 cd /home/vagrant
-wget https://raw.githubusercontent.com/ruebot/islandora-release-manager-helper-scripts/7.x-1.5/islandora-module-list-sans-tuque.txt
+wget -nv -N https://raw.githubusercontent.com/ruebot/islandora-release-manager-helper-scripts/7.x-1.5/islandora-module-list-sans-tuque.txt
 
 # Clone all Islandora Foundation modules
 cd /var/www/html/drupal/sites/all/modules
@@ -37,7 +37,7 @@ drush colorbox-plugin
 #drush openseadragon-plugin -- ISLANDORA-1213 -- Installer is broken
 ####ISLANDORA-1213 WORKAROUND ############################################
 cd /var/www/html/drupal/sites/all/libraries
-wget http://openseadragon.github.io/releases/openseadragon-bin-0.9.129.zip
+wget -nv -N http://openseadragon.github.io/releases/openseadragon-bin-0.9.129.zip
 unzip openseadragon-bin-0.9.129.zip
 mv openseadragon-bin-0.9.129 openseadragon
 ###########################################################################

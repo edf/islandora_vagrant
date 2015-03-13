@@ -3,7 +3,7 @@ echo "Installing Djatoka"
 # Setup install path and download Djatoka
 mkdir /usr/local/djatoka
 cd /tmp
-wget http://downloads.sourceforge.net/project/djatoka/djatoka/1.1/adore-djatoka-1.1.tar.gz
+wget -nv -N http://downloads.sourceforge.net/project/djatoka/djatoka/1.1/adore-djatoka-1.1.tar.gz
 tar -xzvf adore-djatoka-1.1.tar.gz
 cd adore-djatoka-1.1
 mv -v * /usr/local/djatoka

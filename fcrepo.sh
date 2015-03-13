@@ -5,7 +5,7 @@ FEDORA_VERSION=3.8.0
 
 # Get install properties
 cd $HOME_DIR
-wget https://gist.githubusercontent.com/ruebot/d7c2298f47798adb1111/raw/e7a179dca6cd12a3c60dfa6a32ba4f522c45f52b/install.properties
+wget -nv https://gist.githubusercontent.com/ruebot/d7c2298f47798adb1111/raw/e7a179dca6cd12a3c60dfa6a32ba4f522c45f52b/install.properties
 
 # Prepare $FEDORA_HOME
 mkdir /usr/local/fedora
@@ -13,7 +13,7 @@ chown tomcat7:tomcat7 /usr/local/fedora
 chmod g-w /usr/local/fedora
 
 # Download fcrepo
-wget http://downloads.sourceforge.net/project/fedora-commons/fedora/$FEDORA_VERSION/fcrepo-installer-$FEDORA_VERSION.jar
+wget -nv -N http://downloads.sourceforge.net/project/fedora-commons/fedora/$FEDORA_VERSION/fcrepo-installer-$FEDORA_VERSION.jar
 java -jar fcrepo-installer-$FEDORA_VERSION.jar install.properties
 
 # Deploy fcrepo
@@ -30,7 +30,7 @@ git clone https://github.com/Islandora/islandora-xacml-policies.git islandora
 
 # Setup Drupal filter
 cd /tmp
-wget https://github.com/Islandora/islandora_drupal_filter/releases/download/v7.1.3/fcrepo-drupalauthfilter-3.7.0.jar
+wget -nv -N https://github.com/Islandora/islandora_drupal_filter/releases/download/v7.1.3/fcrepo-drupalauthfilter-3.7.0.jar
 mv -v fcrepo-drupalauthfilter-3.7.0.jar /var/lib/tomcat7/webapps/fedora/WEB-INF/lib
 chown tomcat7:tomcat7 /var/lib/tomcat7/webapps/fedora/WEB-INF/lib/fcrepo-drupalauthfilter-3.7.0.jar
 cd /usr/local/fedora/server/config

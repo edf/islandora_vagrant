@@ -10,7 +10,7 @@ sudo apt-get install autoconf automake build-essential libass-dev libfreetype6-d
 
 # Download FFmpeg
 cd /tmp
-wget "http://www.ffmpeg.org/releases/ffmpeg-$FFMPEG_VERSION.tar.gz"
+wget -nv -N "http://www.ffmpeg.org/releases/ffmpeg-$FFMPEG_VERSION.tar.gz"
 tar -xzvf ffmpeg-$FFMPEG_VERSION.tar.gz
 
 # Compile FFmpeg

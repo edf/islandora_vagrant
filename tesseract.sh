@@ -10,7 +10,7 @@ apt-get install libleptonica-dev -y --force-yes
 
 # Download and compile Tesseract
 cd /tmp
-wget "https://tesseract-ocr.googlecode.com/files/tesseract-ocr-$TESSERACT_VERSION.tar.gz"
+wget -nv -N "https://tesseract-ocr.googlecode.com/files/tesseract-ocr-$TESSERACT_VERSION.tar.gz"
 tar -xzvf tesseract-ocr-$TESSERACT_VERSION.tar.gz
 cd tesseract-ocr && ./autogen.sh && ./configure && make && sudo make install && sudo ldconfig
 chown -hR vagrant:vagrant $TESSDATA_HOME

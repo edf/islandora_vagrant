@@ -32,7 +32,7 @@ sleep 75
 
 # GSearch configurations
 cd /var/lib/tomcat7/webapps/fedoragsearch/WEB-INF/classes
-wget http://alpha.library.yorku.ca/fgsconfigFinal.zip
+wget -nv -N http://alpha.library.yorku.ca/fgsconfigFinal.zip
 unzip fgsconfigFinal.zip
 
 # Deploy dgi_gsearch_extensions

@@ -5,7 +5,7 @@ SOLR_VERSION=4.2.0
 
 # Download Solr
 cd /tmp
-wget http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz
+wget -nv -N http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz
 tar -xzvf solr-$SOLR_VERSION.tgz
 
 # Prepare SOLR_HOME
